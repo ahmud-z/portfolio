@@ -1,0 +1,220 @@
+
+@media screen and (max-width: 1441px) {
+    body {
+        padding: 0 100px;
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+    body {
+        padding: 0 20px;
+    }
+
+    .name {
+        display: block;
+    }
+
+    .name-icon {
+        display: none;
+    }
+
+    .portfolio-items {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .store {
+        grid-template-columns: repeat(3, minmax(0, 2fr));
+        gap: 1rem;
+    }
+}
+
+@media screen and (min-width: 992px) {}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 0 20px;
+    }
+    .name {
+        display: none;
+    }
+
+    .name-icon {
+        display: block;
+    }
+
+    .logo a {
+        font-size: 22px;
+    }
+
+    .portfolio-items {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+    }
+
+    .store {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+    }
+
+    .service-items {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .about-me-info-box {
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .profile img {
+        width: 250px;
+    }
+
+    .about-me {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .about-me-details {
+        width: 100%;
+        text-align: center;
+    }
+
+    .used-tools {
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .btn-mobile-menu {
+        display: block;
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    body {
+        padding: 0 10px;
+    }
+
+    section:where(:not(#nav-bar)) {
+        padding-bottom: 30px;
+    }
+
+    .header-font-sz {
+        font-size: 25px;
+    }
+
+    .sub-header-font-sz {
+        font-size: 16px;
+        padding: 6px 0;
+        text-align: center;
+    }
+
+    .landing-page-showreel h1 {
+        font-size: 30px;
+    }
+
+    .portfolio-items,
+    .store {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    #contact {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .social-links {
+        gap: 1rem;
+    }
+
+    .product-item {
+        width: 100%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .nav-bar {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .logo a {
+        font-size: 22px;
+    }
+
+    .pages-link-items {
+        display: none;
+    }
+
+    .service-items {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .service-item {
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        width: 100%;
+        height: 100%;
+        padding: 10px 0;
+    }
+
+    .service-items img {
+        height: 100px;
+    }
+
+    .service-items p {
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .about-me {
+        gap: 1rem;
+    }
+
+    .about-me img {
+        width: 250px;
+    }
+
+    .about-me-info h2 {
+        text-align: center;
+    }
+
+    .bio-description {
+        padding-top: 1rem;
+        width: 350px;
+        text-align: justify;
+    }
+
+    .about-me-details .hide-in-phone {
+        display: none;
+    }
+
+    .my-info-phone {
+        display: block;
+        width: 100%;
+    }
+
+    .used-tools {
+        font-size: 14px;
+    }
+
+    .tools-icons {
+        gap: 1rem;
+    }
+
+    .used-tools svg {
+        width: 30px;
+    }
+
+    .btn-mobile-menu {
+        display: block;
+        display: flex;
+    }
+
+}

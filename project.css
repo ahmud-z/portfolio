@@ -1,0 +1,71 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 0.5rem;
+}
+
+.cover{
+    grid-column: span 2;
+}
+
+.grid-container img {
+    width: 100%;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+}
+
+.port p {
+    font-size: 20px;
+    text-align: center;
+}
+
+.port {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.project-description{
+    padding: 1rem 8rem;
+    text-align: justify;
+}
+
+
+@media screen and (max-width: 576px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 5px;
+    }
+
+    h1 {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    p {
+        font-size: 16px;
+        padding-top: 10px;
+        text-align: justify;
+
+    }
+
+    .port {
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+    }
+    
+    .project-description{
+        padding: 0.5rem 0;
+    }
+
+    .cover{
+        grid-column: span 1;
+    }
+}
