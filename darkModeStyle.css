@@ -6,7 +6,7 @@
 .dark {
     background: #081B29;
     color: white;
-    transition: all 500ms;
+    transition: all 300ms;
 }
 
 .dark #contact {
@@ -52,7 +52,7 @@
 }
 
 .dark .buy-btn:hover {
-    border: 1px solid #1eff00;
+    border: 1px solid #00aeff;
 }
 
 .dark button:active {

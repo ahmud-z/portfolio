@@ -13,9 +13,34 @@ light.addEventListener('click', function () {
         this.classList.remove('bi-moon-stars');
         this.classList.add('bi-brightness-high');
     }
-
-    body.classList.toggle('dark');
+    //body.classList.toggle('dark');
 });
+
+// Function to set the theme preference in localStorage
+function setThemePreference(theme) {
+    localStorage.setItem('theme', theme);
+}
+
+// Function to apply the theme based on the stored preference
+function applyThemePreference() {
+    const theme = localStorage.getItem('theme');
+    if (theme === 'dark') {
+        body.classList.add('dark');
+    } else {
+        body.classList.remove('dark');
+    }
+}
+
+// Event listener for theme toggle
+light.addEventListener('click', function () {
+    body.classList.toggle('dark');
+    const theme = body.classList.contains('dark') ? 'dark' : 'light';
+    setThemePreference(theme);
+});
+
+// Apply theme preference on page load
+applyThemePreference();
+
 
 btnMobileMenu.addEventListener('click', function () {
     mobileMenu.classList.toggle('show')
