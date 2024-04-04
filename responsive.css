@@ -156,13 +156,6 @@
         grid-template-columns: repeat(1, minmax(0, 1fr));
     }
 
-    .service-item {
-        border-radius: 8px;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        width: 100%;
-        height: 100%;
-        padding: 10px 0;
-    }
 
     .service-items img {
         height: 100px;
@@ -217,4 +210,11 @@
         display: flex;
     }
 
+}
+
+@media screen and (max-width: 429px) {
+ 
+.bio-description{
+    padding: 0.8rem 1.5rem;
+}
 }

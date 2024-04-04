@@ -1,79 +1,60 @@
 :root {
-    --dark-mode-border-color: rgb(255, 255, 255, 0.15);
+    --dark-mode-border-color: rgba(255, 255, 255, 0.15);
     --dark-mode-cards-bg-color: rgba(255, 255, 255, 0.05);
 }
 
 .dark {
-    /* background: #22242B; */
-    /* background: #24292E; */
     background: #081B29;
     color: white;
     transition: all 500ms;
+}
 
-    #contact {
-        border: 1px solid var(--dark-mode-border-color);
-    }
+.dark #contact {
+    border: 1px solid var(--dark-mode-border-color);
+}
 
-    .bi {
-        color: white;
-    }
+.dark .bi,
+.dark a {
+    color: white;
+}
 
-    a {
-        color: white;
-    }
+.dark .portfolio-item,
+.dark .service-item {
+    border: 1px solid var(--dark-mode-border-color);
+}
 
-    .portfolio-item {
-        border: 1px solid var(--dark-mode-border-color);
-    }
+.dark .service-item {
+    background: var(--dark-mode-cards-bg-color);
+}
 
-    .service-item {
-        background: var(--dark-mode-cards-bg-color);
-        border: 1px solid var(--dark-mode-border-color);
-        color: white;
-    }
+.dark .service-item p {
+    color: rgb(211, 211, 211);
+}
 
-    .service-item p {
-        color: rgb(211, 211, 211);
-    }
+.dark .mobile-menu {
+    background: #38414a;
+}
 
-    .mobile-menu {
-        background: #38414a;
-    }
+.dark .mobile-menu a {
+    color: white;
+}
 
-    .mobile-menu a {
-        color: white;
-    }
+.dark .contact-box input,
+.dark textarea,
+.dark .buy-btn {
+    background: none;
+    border: 1px solid var(--dark-mode-border-color);
+    color: white;
+}
 
-    .hello {
-        color: rgb(72, 255, 0);
-    }
+.dark .buy-btn {
+    background: var(--dark-mode-cards-bg-color);
+}
 
-    .bi-heart{
-        color: red;
-    }
+.dark .buy-btn:hover {
+    border: 1px solid #1eff00;
+}
 
-    .contact-box input,
-    textarea {
-        background: none;
-        border: 1px solid var(--dark-mode-border-color);
-        color: white;
-    }
-
-    .buy-btn {
-        padding: .5rem 1rem;
-        background: var(--dark-mode-cards-bg-color);
-        border: 1px solid var(--dark-mode-border-color);
-        border-radius: var(--small-border-radius);
-        color: white;
-        font-weight: 500;
-        cursor: pointer;
-    }
-
-    .buy-btn:hover {
-        border: 1px solid #1eff00;
-    }
-
-    button:active {
-        opacity: .6;
-    }
+.dark button:active {
+    opacity: 0.6;
 }
