@@ -34,7 +34,7 @@ body {
 
 
 body::-webkit-scrollbar {
-    width: 1rem;
+    width: .5rem;
 }
 
 body::-webkit-scrollbar-track {
@@ -43,7 +43,7 @@ body::-webkit-scrollbar-track {
 
 
 body::-webkit-scrollbar-thumb {
-    background: #6649b8;
+    background: gray;
 }
 
 .nav-bar {
@@ -56,6 +56,10 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
 }
 
+.logo img{
+    width: 45px;
+}
+
 section:where(:not(#nav-bar)) {
     padding-bottom: 60px;
 }
@@ -63,7 +67,6 @@ section:where(:not(#nav-bar)) {
 
 section:where(#footer) {
     padding: 20px;
-    padding-top: 50px;
 }
 
 .logo {
@@ -73,7 +76,7 @@ section:where(#footer) {
 }
 
 .logo img {
-    border: 2px solid teal;
+    border: 2px solid #046EFF;
     border-radius: 50%;
 }
 
@@ -394,7 +397,7 @@ textarea:focus {
 
 .profile p {
     padding-top: 4px;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .about-me-info-box {

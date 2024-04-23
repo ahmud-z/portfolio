@@ -88,6 +88,16 @@ function emailSend() {
             Message: ${document.getElementById('message').value}
         `
     }).then(
-        message => alert(message)
+        message => {
+            alert("Email sent successfully!");
+            clearForm(); // Clear the form after successful submission
+        }
     );
+}
+
+function clearForm() {
+    document.getElementById('name').value = '';
+    document.getElementById('address').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('message').value = '';
 }
