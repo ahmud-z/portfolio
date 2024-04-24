@@ -87,7 +87,7 @@ function emailSend() {
         Name: ${document.getElementById('name').value}
         Address: ${document.getElementById('address').value}    
         From: ${document.getElementById('email').value}
-            Message: ${document.getElementById('message').value}
+        Message: ${document.getElementById('message').value}
         `
     }).then(
         message => {
