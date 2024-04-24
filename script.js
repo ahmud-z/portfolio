@@ -84,7 +84,9 @@ function emailSend() {
         From: `ahmudulhossain.n5@gmail.com`,
         Subject: `New email from portfolio contact form`,
         Body: `
-            FROM: ${document.getElementById('email').value}
+        Name: ${document.getElementById('name').value}
+        Address: ${document.getElementById('address').value}    
+        From: ${document.getElementById('email').value}
             Message: ${document.getElementById('message').value}
         `
     }).then(
