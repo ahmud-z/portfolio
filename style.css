@@ -58,6 +58,7 @@ body::-webkit-scrollbar-thumb {
 
 .logo img{
     width: 45px;
+    display: flex;
 }
 
 section:where(:not(#nav-bar)) {
