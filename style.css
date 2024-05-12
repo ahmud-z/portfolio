@@ -18,32 +18,15 @@ a {
     color: black;
 }
 
-
-
 html {
     scroll-behavior: smooth;
 }
 
 body {
     background: white;
-    /* background: #F6F8FA; */
-    height: 100vh;
+    height: 100%;
     width: 100%;
     padding: 0 300px;
-}
-
-
-body::-webkit-scrollbar {
-    width: .5rem;
-}
-
-body::-webkit-scrollbar-track {
-    background: white;
-}
-
-
-body::-webkit-scrollbar-thumb {
-    background: gray;
 }
 
 .nav-bar {
@@ -56,7 +39,7 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
 }
 
-.logo img{
+.logo img {
     width: 45px;
     display: flex;
 }
@@ -459,6 +442,6 @@ button:active {
 }
 
 
-.footer p{
+.footer p {
     font-size: 180px;
 }

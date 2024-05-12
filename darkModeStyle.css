@@ -4,9 +4,22 @@
 }
 
 .dark {
-    background: #081B29;
+    background: #010B17;
+    /* background: #081B29; */
     color: white;
     transition: all 300ms;
+}
+
+body::-webkit-scrollbar {
+    width: 0.9rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: #010B17;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #ABABAB;
 }
 
 .dark #contact {
