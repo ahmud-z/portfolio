@@ -86,6 +86,10 @@
         gap: 1rem;
     }
 
+    .like-amount {
+        display: none;
+    }
+
     /* .btn-mobile-menu {
         display: block;
         display: flex;
