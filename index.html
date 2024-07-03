@@ -549,25 +549,35 @@
     </section>
 
     <section id="contact">
+
+        <div class="popup-container">
+            <div class="popup" id="popup">
+                <img src="images/tick.png" alt="">
+                <h2 class="thank">Thank you</h2>
+                <p>Your message sent successfully.</p>
+                <button onclick="hide();">OK</button>
+            </div>
+        </div>
+
         <div class="section-header">
             <h1 class="header-font-sz">Contact Me</h1>
             <p class="sub-header-font-sz">Feel free to reach out to me with any questions or inquiries.</p>
         </div>
 
-        <form method="post">
+        <form method="post" action="\" onsubmit="emailSend(event)">
             <div class="contact-box">
                 <div class="name-address-input">
-                    <input class="darkModeBorder" type="text" name="name" placeholder="Name" id="name">
-                    <input type="text" name="address" placeholder="Address" id="address">
+                    <input class="darkModeBorder" type="text" name="name" placeholder="Name" id="name" required>
+                    <input type="text" name="address" placeholder="Address" id="address" required>
 
                 </div>
                 <div class="mail-messege-input">
                     <input name="email" id="email" type="email" placeholder="Email" id="email" required>
-                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"
-                        id="message"></textarea>
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" id="message"
+                        required></textarea>
                 </div>
             </div>
-            <button class="buy-btn" type="button" id="sendBtn" onclick="emailSend()">SEND</button>
+            <button class="buy-btn" type="submit" id="sendBtn">SEND</button>
         </form>
 
         <div class="social-links">
