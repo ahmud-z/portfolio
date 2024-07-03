@@ -74,7 +74,9 @@ document.addEventListener('scroll', function () {
 const copyrightYear = document.getElementById('year')
 copyrightYear.innerText = new Date().getFullYear()
 
-function emailSend() {
+function emailSend(e) {
+    e.preventDefault();
+    e.stopPropagation();
     Email.send({
         Host: "smtp.elasticemail.com",
         Port: "2525",
@@ -91,7 +93,8 @@ function emailSend() {
         `
     }).then(
         message => {
-            alert("Email sent successfully!");
+            // alert("Email sent successfully!");
+            show();
             clearForm(); // Clear the form after successful submission
         }
     );
@@ -102,4 +105,12 @@ function clearForm() {
     document.getElementById('address').value = '';
     document.getElementById('email').value = '';
     document.getElementById('message').value = '';
+}
+
+const popup = document.getElementById('popup');
+function show() {
+    popup.classList.add('show-popup')
+}
+function hide() {
+    popup.classList.remove('show-popup')
 }
