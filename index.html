@@ -549,13 +549,21 @@
     </section>
 
     <section id="contact">
+        <div class="popup-container">
+            <div class="popup" id="success-popup">
+                <img src="images/tick.png" alt="">
+                <h2 id="thank">Thank you</h2>
+                <p id="msg">Your message sent successfully.</p>
+                <button onclick="hide('success-popup');">OK</button>
+            </div>
+        </div>
 
         <div class="popup-container">
-            <div class="popup" id="popup">
+            <div class="popup" id="error-popup">
                 <img src="images/tick.png" alt="">
-                <h2 class="thank">Thank you</h2>
-                <p>Your message sent successfully.</p>
-                <button onclick="hide();">OK</button>
+                <h2 id="thank">Opps!</h2>
+                <p id="msg">Failed to deliver your message.</p>
+                <button onclick="hide('error-popup');">OK</button>
             </div>
         </div>
 
@@ -564,12 +572,13 @@
             <p class="sub-header-font-sz">Feel free to reach out to me with any questions or inquiries.</p>
         </div>
 
-        <form method="post" action="\" onsubmit="emailSend(event)">
+        <!-- <form method="post" action="\" onsubmit="emailSend(event)"> -->
+        <form onsubmit="emailSend(event)" id="contactForm">
             <div class="contact-box">
+                <input type="hidden" name="access_key" value="db1f6023-08e5-4529-a99b-2eb1bfba622e">
                 <div class="name-address-input">
                     <input class="darkModeBorder" type="text" name="name" placeholder="Name" id="name" required>
                     <input type="text" name="address" placeholder="Address" id="address" required>
-
                 </div>
                 <div class="mail-messege-input">
                     <input name="email" id="email" type="email" placeholder="Email" id="email" required>
@@ -648,6 +657,7 @@
 
         </div>
     </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
         Fancybox.bind("[data-fancybox]", {
         });
