@@ -77,27 +77,20 @@ copyrightYear.innerText = new Date().getFullYear()
 function emailSend(e) {
     e.preventDefault();
     e.stopPropagation();
-    Email.send({
-        Host: "smtp.elasticemail.com",
-        Port: "2525",
-        Username: "mahmudbappy.pri@gmail.com",
-        Password: "14F28DAC14FFFF13D7A8F40A4FD8C63E39F4",
-        To: 'ahmud.cse@outlook.com',
-        From: `ahmudulhossain.n5@gmail.com`,
-        Subject: `New email from portfolio contact form`,
-        Body: `
-        Name: ${document.getElementById('name').value}
-        Address: ${document.getElementById('address').value}    
-        From: ${document.getElementById('email').value}
-        Message: ${document.getElementById('message').value}
-        `
-    }).then(
-        message => {
-            // alert("Email sent successfully!");
-            show();
-            clearForm(); // Clear the form after successful submission
+
+    const data = new FormData(document.getElementById('contactForm'))
+
+    fetch('https://api.web3forms.com/submit', {
+        method: 'post',
+        body: data
+    }).then(function ({ status }) {
+        if (status === 200) {
+            showModal('success-popup');
+            clearForm();
+        } else {
+            showModal('error-popup');
         }
-    );
+    })
 }
 
 function clearForm() {
@@ -107,10 +100,14 @@ function clearForm() {
     document.getElementById('message').value = '';
 }
 
-const popup = document.getElementById('popup');
-function show() {
+function showModal(modalId) {
+    const popup = document.getElementById(modalId);
+
     popup.classList.add('show-popup')
 }
-function hide() {
+
+function hide(modalId) {
+    const popup = document.getElementById(modalId);
+
     popup.classList.remove('show-popup')
 }
