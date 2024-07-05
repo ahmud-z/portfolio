@@ -449,6 +449,12 @@ button:active {
 
 
 /* popup card style */
+.popup-container {
+    position: fixed;
+    top: 60%;
+    left: 50%;
+}
+
 .popup {
     width: 400px;
     text-align: center;
@@ -491,6 +497,7 @@ button:active {
     background: #006EFF;
     font-weight: bold;
     cursor: pointer;
+    border: none;
 }
 
 .popup button:active {
