@@ -1,20 +1,9 @@
-const light = document.getElementById('light-sun')
-const body = document.querySelector('body')
-const btnMobileMenu = document.getElementById('btn-mobile-menu')
-const mobileMenu = document.getElementById('mobile-menu')
-const element = document.getElementById('myDiv')
+const light = document.getElementById('light-sun');
+const body = document.querySelector('body');
+const btnMobileMenu = document.getElementById('btn-mobile-menu');
+const mobileMenu = document.getElementById('mobile-menu');
+const element = document.getElementById('myDiv');
 const visitorCountKey = 'visitorCount';
-
-light.addEventListener('click', function () {
-    if (this.classList.contains('bi-brightness-high')) {
-        this.classList.remove('bi-brightness-high');
-        this.classList.add('bi-moon-stars');
-    } else {
-        this.classList.remove('bi-moon-stars');
-        this.classList.add('bi-brightness-high');
-    }
-    //body.classList.toggle('dark');
-});
 
 // Function to set the theme preference in localStorage
 function setThemePreference(theme) {
@@ -23,11 +12,15 @@ function setThemePreference(theme) {
 
 // Function to apply the theme based on the stored preference
 function applyThemePreference() {
-    const theme = localStorage.getItem('theme');
+    const theme = localStorage.getItem('theme') || 'dark'; // Default to dark mode
     if (theme === 'dark') {
         body.classList.add('dark');
+        light.classList.remove('bi-brightness-high');
+        light.classList.add('bi-moon-stars');
     } else {
         body.classList.remove('dark');
+        light.classList.remove('bi-moon-stars');
+        light.classList.add('bi-brightness-high');
     }
 }
 
@@ -36,11 +29,19 @@ light.addEventListener('click', function () {
     body.classList.toggle('dark');
     const theme = body.classList.contains('dark') ? 'dark' : 'light';
     setThemePreference(theme);
+
+    // Toggle icon based on theme
+    if (theme === 'dark') {
+        light.classList.remove('bi-brightness-high');
+        light.classList.add('bi-moon-stars');
+    } else {
+        light.classList.remove('bi-moon-stars');
+        light.classList.add('bi-brightness-high');
+    }
 });
 
 // Apply theme preference on page load
 applyThemePreference();
-
 
 btnMobileMenu.addEventListener('click', function () {
     mobileMenu.classList.toggle('show')
